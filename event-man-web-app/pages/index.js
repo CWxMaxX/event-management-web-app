@@ -14,9 +14,6 @@ export default function Home() {
         </p>
       </main>
 
-      <footer>
-
-      </footer>
 
 
 
