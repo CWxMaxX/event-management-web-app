@@ -17,3 +17,7 @@ body {
     min-height: 100vh;
     height: 100%;
 }
+
+.rounded-input{
+    margin-right: 20px;
+}
