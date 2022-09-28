@@ -40,7 +40,7 @@ function SignupCard() {
                 variant="outlined"
               />
             </CardContent>
-            <CardActions sx={{ justifyContent: "center" }}>
+            <CardActions sx={{ justifyContent: "center" }} className={""}>
               <Button>
                 <img
                   src="https://img.icons8.com/color/30/000000/google-logo.png"
