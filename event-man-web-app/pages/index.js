@@ -1,20 +1,33 @@
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { Backdrop, CircularProgress } from "@mui/material";
 
 export default function Home() {
   const router = useRouter();
+  const [open, setOpen] = useState(true);
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   useEffect(() => {
-    router.push("/auth");
+    setTimeout(() => router.push("/auth"), 2000);
+    // router.push("/auth");
   }, []);
   return (
-    <div className="bg-blue-200 ">
+    <div className="flex-1 flex flex-col justify-center items-center w-full h-screen ">
       <Head>
         <title>Event Management App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="">
-        <p>Home</p>
+        <Backdrop
+          sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          open={open}
+          onClick={handleClose}
+        >
+          <CircularProgress color="inherit" />
+        </Backdrop>
       </main>
     </div>
   );
