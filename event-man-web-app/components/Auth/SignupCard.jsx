@@ -16,7 +16,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
 
-import { googleProvider } from "../../pages/auth/authProvider";
+import { googleProvider } from "../../api/authProvider";
 import { useRouter } from "next/router";
 
 function SignupCard() {

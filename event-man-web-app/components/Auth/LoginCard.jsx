@@ -16,7 +16,7 @@ import {
 } from "firebase/auth";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { auth } from "../../firebaseConfig";
-import { googleProvider } from "../../pages/auth/authProvider";
+import { googleProvider } from "../../api/authProvider";
 import { useRouter } from "next/router";
 import { addUser } from "../../api/userApi";
 
