@@ -8,9 +8,33 @@ import {
   CardContent,
   TextField,
 } from "@mui/material";
+import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  onAuthStateChanged,
+} from "firebase/auth";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import { auth } from "../../firebaseConfig";
+import { googleProvider } from "../../pages/auth/authProvider";
+import { useRouter } from "next/router";
+import { addUser } from "../../api/userApi";
 
 function LoginCard() {
+  const router = useRouter();
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/firebase.User
+      const uid = user.uid;
+      router.push("/home");
+      // ...
+    } else {
+      // User is signed out
+      // ...
+    }
+  });
+
   return (
     <div className={"flex-1 page bg-sky-50"}>
       <SectionColumn className={" h-screen "}>
@@ -34,7 +58,11 @@ function LoginCard() {
               />
             </CardContent>
             <CardActions sx={{ justifyContent: "center" }}>
-              <Button>
+              <Button
+                onClick={() => {
+                  googleProvider();
+                }}
+              >
                 <img
                   src="https://img.icons8.com/color/30/000000/google-logo.png"
                   alt={"Google Login"}

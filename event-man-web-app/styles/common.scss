@@ -3,3 +3,28 @@
 .backOrange{
   background-color: $ORANGE;
 }
+
+.backgroundCard{
+  background-color: $BACKGROUND_COLOR_LIGHT
+}
+
+.subTitle{
+  font-size: 16px;
+  font-weight: 700;
+  color: $TEXT_LIGHT;
+  letter-spacing: 1.2px;
+}
+
+.bgDark{
+  background-color: $BACKGROUND_COLOR_DARK;
+}
+.bgLight{
+  background-color: $BACKGROUND_COLOR_LIGHT;
+}
+
+.title{
+  font-size: 16px;
+  font-weight: 700;
+  color: ghostwhite;
+  letter-spacing: 1.2px;
+}

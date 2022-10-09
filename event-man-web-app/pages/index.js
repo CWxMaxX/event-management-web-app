@@ -12,7 +12,6 @@ export default function Home() {
 
   useEffect(() => {
     setTimeout(() => router.push("/auth"), 2000);
-    // router.push("/auth");
   }, []);
   return (
     <div className="flex-1 flex flex-col justify-center items-center w-full h-screen ">
