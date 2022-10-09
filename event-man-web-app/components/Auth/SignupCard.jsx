@@ -15,10 +15,12 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
-import { router } from "next/client";
+
 import { googleProvider } from "../../pages/auth/authProvider";
+import { useRouter } from "next/router";
 
 function SignupCard() {
+  const router = useRouter();
   const [userDetails, setUserDetails] = useState({
     email: "",
     password: "",
