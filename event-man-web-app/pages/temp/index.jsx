@@ -16,7 +16,6 @@ import {
 function index() {
   return (
     <div>
-      <Button onClick={() => handleSignOut()}>Sign out</Button>
       {/*<Button onClick={() => addUser()}>Add New User</Button>*/}
       <Button
         onClick={() => getEventListByUser("h8lHxG3GaJfWDzDvbV2CFloBu0u2")}
