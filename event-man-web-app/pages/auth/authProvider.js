@@ -8,7 +8,7 @@ import { auth } from "../../firebaseConfig";
 import { addUser } from "../../api/userApi";
 
 // const googleProvider = new GoogleAuthProvider();
-const googleProvider = () => {
+export const googleProvider = () => {
   const provider = new GoogleAuthProvider();
 
   signInWithPopup(auth, provider)
@@ -36,5 +36,3 @@ const googleProvider = () => {
       // ...
     });
 };
-
-export default googleProvider;
