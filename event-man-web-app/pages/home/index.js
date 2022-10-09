@@ -5,18 +5,7 @@ import { signOut } from "firebase/auth";
 import CommonLayout from "../../components/Layouts/CommonLayout";
 
 import { useRouter } from "next/router";
-import {
-  addEventToUser,
-  getEventListByUser,
-  getUserByEmail,
-} from "../../api/userApi";
-import {
-  addUserToEvent,
-  createEvent,
-  getEventDetails,
-  getEventsByUserId,
-  updateEventDetails,
-} from "../../api/eventApi";
+
 import BackgroundCard from "../../components/Cards/backgroundCard";
 
 function index() {
@@ -26,10 +15,11 @@ function index() {
     signOut(auth)
       .then(() => {
         console.log("test");
-        // router.push("/").then(() => {});
+        router.push("/").then(() => {});
         // Sign-out successful.
       })
       .catch((error) => {
+        console.log(error);
         // An error happened.
       });
   };
