@@ -12,7 +12,6 @@ import {
   getEventsByUserId,
   updateEventDetails,
 } from "../../api/eventApi";
-import { handleSignOut } from "../../api/auth";
 
 function index() {
   return (
