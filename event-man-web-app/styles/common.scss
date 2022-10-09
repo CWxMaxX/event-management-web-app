@@ -1,5 +1,6 @@
 @import 'colors';
 
+
 .backOrange{
   background-color: $ORANGE;
 }
@@ -27,4 +28,22 @@
   font-weight: 700;
   color: ghostwhite;
   letter-spacing: 1.2px;
+}
+.full-height {
+  height: 100vh;
+}
+
+//Cards
+.mainText{
+  color: $TEXT_LIGHT;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+.subText{
+  color: $TEXT_LIGHT;
+  font-size: 12px;
+  font-weight: 100;
+  letter-spacing: 1.2px;
+
 }

@@ -14,7 +14,7 @@ export default function Home() {
     setTimeout(() => router.push("/auth"), 2000);
   }, []);
   return (
-    <div className="flex-1 flex flex-col justify-center items-center w-full h-screen ">
+    <div className="flex-1 flex flex-col justify-center items-center w-full h-screen bgDark ">
       <Head>
         <title>Event Management App</title>
         <link rel="icon" href="/favicon.ico" />

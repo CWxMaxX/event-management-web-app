@@ -24,18 +24,23 @@ function CommonLayout({ children, title }) {
     router.push("/home");
   };
   return (
-    <div className={"flex-1 bgDark "}>
+    <div className={"flex-1 h-screen  bgDark "}>
       <SectionRow className="h-12 bgDark z-10 sm:justify-start justify-center  title  w-full items-center px-10 fixed ">
-        <HomeIcon onClick={() => goToHome()} className={"absolute  left-3"} />
+        <HomeIcon
+          sx={{ color: "#9ac200" }}
+          onClick={() => goToHome()}
+          className={"absolute  left-3"}
+        />
         <span className={"mt-2"}>{title || "---"}</span>
         <span className={"pt-1 absolute hidden sm:inline-block right-10 "}>
           {user?.displayName || "No User"}
         </span>
-        <AccountCircleIcon className={"absolute  right-3 z-10"} />
+        <AccountCircleIcon
+          sx={{ color: "#9ac200" }}
+          className={"absolute  right-3 z-10"}
+        />
       </SectionRow>
-      <SectionColumn
-        className={"flex-1 z-0 w-full pt-20 min-h-screen  items-center"}
-      >
+      <SectionColumn className={"flex-1 z-0 w-full pt-20    items-center"}>
         {children}
       </SectionColumn>
     </div>
