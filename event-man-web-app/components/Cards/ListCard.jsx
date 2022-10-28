@@ -39,7 +39,7 @@ function ListCard({ title }) {
   const renderList = (array) => {
     return array.map((item, i) => {
       return (
-        <div>
+        <div className={"hover:cursor-pointer"}>
           <SectionRow className={"justify-center relative "}>
             <SectionColumn className={"w-full px-10  py-3"}>
               <div className={"mainText"}>{item.title}</div>
