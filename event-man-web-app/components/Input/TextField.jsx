@@ -1,4 +1,5 @@
 import React from "react";
+import { Field } from "formik";
 
 function TextField({ id, name, type, onChange, onBlur, value, placeholder }) {
   return (
@@ -8,7 +9,7 @@ function TextField({ id, name, type, onChange, onBlur, value, placeholder }) {
       }
       style={{ backgroundColor: "#2d3236" }}
     >
-      <input
+      <Field
         className={"flex-1"}
         style={{ outline: "none", color: "white", backgroundColor: "#2d3236" }}
         id={id}

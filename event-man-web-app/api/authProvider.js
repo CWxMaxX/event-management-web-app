@@ -3,6 +3,7 @@ import {
   signInWithPopup,
   getRedirectResult,
   signInWithRedirect,
+  getAuth,
 } from "firebase/auth";
 import { auth } from "../firebaseConfig";
 import { addUser } from "./userApi";
@@ -18,6 +19,7 @@ export const googleProvider = () => {
       const token = credential.accessToken;
       // The signed-in user info.
       const user = result.user;
+      localStorage.setItem("uid", user.uid);
       addUser(user);
       console.log("User ====>", result.user);
       if (user) {
@@ -35,4 +37,9 @@ export const googleProvider = () => {
       const credential = GoogleAuthProvider.credentialFromError(error);
       // ...
     });
+};
+
+export const getUID = () => {
+  const uid = localStorage.getItem("uid");
+  return uid;
 };

@@ -133,3 +133,10 @@
   background-color: $GRAY_DARK;
   display: flex;
 }
+
+.error-msg{
+  color: $RED;
+  font-weight: lighter;
+  font-style: italic;
+  font-size: small;
+}
