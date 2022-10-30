@@ -47,3 +47,96 @@
   letter-spacing: 1.2px;
 
 }
+
+
+
+//Buttons
+.disabled-btn{
+  background-color: $GRAY_DARK !important;
+  font-weight: 500 !important;
+  color: $BACKGROUND_COLOR_DARK !important;
+}
+.disabled-btn:hover{
+  background-color: $GRAY_DARK !important;
+  font-weight: 500 !important;
+  color: $BACKGROUND_COLOR_DARK !important;
+  cursor: not-allowed;
+}
+
+.primary-btn{
+  background-color: $ACCENT_GREEN;
+  color: $BACKGROUND_COLOR_DARK;
+  outline: none;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.primary-btn:hover{
+  background-color: $ACCENT_GREEN_DARK;
+  color: #ffffff;
+  outline: none;
+
+}
+.cancel-btn{
+  background-color: $RED;
+  color: $BACKGROUND_COLOR_DARK;
+  outline: none;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.cancel-btn:hover{
+  background-color: $RED_DARK;
+  color: #ffffff;
+  outline: none;
+
+}
+.secondary-btn{
+  background-color: $BLUE;
+  color: $BACKGROUND_COLOR_DARK;
+  outline: none;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.secondary-btn:hover{
+  background-color: $BLUE_DARK;
+  color: #ffffff;
+  outline: none;
+
+}
+
+
+//Inputs
+
+.main-text-field{
+
+
+  min-width: 300px;
+  width: 80vw;
+  max-width: 500px;
+  height: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 24px;
+  outline: none;
+  background-color: $BACKGROUND_COLOR_LIGHT;
+  display: flex;
+  margin: 5px 10px 5px 10px
+
+
+}
+.main-text-field:focus{
+
+  height: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 24px;
+  outline: none;
+  background-color: $GRAY_DARK;
+  display: flex;
+}
+
+.error-msg{
+  color: $RED;
+  font-weight: lighter;
+  font-style: italic;
+  font-size: small;
+}

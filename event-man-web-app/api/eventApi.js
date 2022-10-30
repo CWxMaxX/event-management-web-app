@@ -22,6 +22,7 @@ export const createEvent = async (uid, eventDetails) => {
     usersList: [uid],
     eventDetails: eventDetails,
     expensesList: [],
+    status: "PLANING",
   };
   console.log(data);
   const docRef = collection(db, "eventCollection");
