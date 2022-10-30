@@ -5,7 +5,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { getEventsByUserId } from "../../api/eventApi";
 import { getUID } from "../../api/authProvider";
 import { getAuth } from "firebase/auth";
-import { getEventList } from "../../pages/project/helpers/eventDataManipulation";
+import { getEventList } from "../../helpers/eventDataManipulation";
 
 function ListCard({ title }) {
   const [res, setRes] = useState();
@@ -19,38 +19,6 @@ function ListCard({ title }) {
     });
   }, []);
 
-  const _array = [
-    {
-      title: "Event 1",
-      location: "Gampaha",
-      date: "18/01/2023",
-      status: "Planing",
-    },
-    {
-      title: "Event 2",
-      location: "Negombo",
-      date: "18/01/2023",
-      status: "Done",
-    },
-    {
-      title: "Event 3",
-      location: "Nuwara Eliya",
-      date: "18/01/2023",
-      status: "Planing",
-    },
-    {
-      title: "Event 4",
-      location: "Kandy",
-      date: "18/01/2023",
-      status: "Ready",
-    },
-    {
-      title: "Event 5",
-      location: "Gampaha",
-      date: "18/01/2023",
-      status: "Planing",
-    },
-  ];
   const renderList = (array) => {
     return array.map((item, i) => {
       return (
