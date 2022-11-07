@@ -24,33 +24,35 @@ function ListCard({ title }) {
   const renderList = (array) => {
     return array.map((item, i) => {
       return (
-        <Link href={"/project/" + item?.id} key={i}>
-          <div className={"hover:cursor-pointer"} key={i}>
-            <SectionRow className={"justify-center relative "}>
-              <SectionColumn className={"w-full px-10  py-3"}>
-                <div className={"mainText"}>{item.title}</div>
-                <SectionRow className={"w-full items-center"}>
-                  <div className={"subText "}>{item.date}</div>
-                  <Divider
-                    orientation="vertical"
-                    sx={{ bgcolor: "#5f666e", mx: 1 }}
-                  />
-                  <LocationOnIcon
-                    fontSize={"small"}
-                    sx={{ width: 15, mr: 1 }}
-                  />
-                  <div className={"subText "}>{item.location}</div>
-                  <Chip
-                    size={"small"}
-                    label={item.status}
-                    sx={{ bgcolor: "#9ac200", color: "#000" }}
-                    className={"absolute top-2.5 w-20 right-5"}
-                  />
-                </SectionRow>
-              </SectionColumn>
-            </SectionRow>
-            <Divider variant="middle" light sx={{ bgcolor: "#5f666e" }} />
-          </div>
+        <Link href={"/project/" + item?.id} key={i} target={"_blank"}>
+          <a target={"_blank"}>
+            <div className={"hover:cursor-pointer"} key={i}>
+              <SectionRow className={"justify-center relative "}>
+                <SectionColumn className={"w-full px-10  py-3"}>
+                  <div className={"mainText"}>{item.title}</div>
+                  <SectionRow className={"w-full items-center"}>
+                    <div className={"subText "}>{item.date}</div>
+                    <Divider
+                      orientation="vertical"
+                      sx={{ bgcolor: "#5f666e", mx: 1 }}
+                    />
+                    <LocationOnIcon
+                      fontSize={"small"}
+                      sx={{ width: 15, mr: 1 }}
+                    />
+                    <div className={"subText "}>{item.location}</div>
+                    <Chip
+                      size={"small"}
+                      label={item.status}
+                      sx={{ bgcolor: "#9ac200", color: "#000" }}
+                      className={"absolute top-2.5 w-20 right-5"}
+                    />
+                  </SectionRow>
+                </SectionColumn>
+              </SectionRow>
+              <Divider variant="middle" light sx={{ bgcolor: "#5f666e" }} />
+            </div>
+          </a>
         </Link>
       );
     });
