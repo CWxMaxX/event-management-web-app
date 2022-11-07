@@ -58,8 +58,8 @@ export const getEventsByUserId = async (uid) => {
 
   querySnapshot.forEach((doc) => {
     // doc.data() is never undefined for query doc snapshots
-
-    eventsArray.push(doc.data());
+    const dataSet = { data: doc.data(), id: doc.id };
+    eventsArray.push(dataSet);
   });
 
   return eventsArray;

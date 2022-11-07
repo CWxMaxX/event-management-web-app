@@ -110,7 +110,11 @@ const AddNewProject = () => {
                 className={"!mb-6"}
               />
 
-              <CancelButton title={"Cancel"} type={"reset"} />
+              <CancelButton
+                title={"Cancel"}
+                type={"reset"}
+                className={"!mb-6"}
+              />
             </SectionRow>
           </Form>
         </Formik>
