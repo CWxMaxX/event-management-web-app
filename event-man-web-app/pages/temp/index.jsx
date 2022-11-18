@@ -6,12 +6,18 @@ import {
   getUserByEmail,
 } from "../../api/userApi";
 import {
+  addExpense,
   addUserToEvent,
   createEvent,
   getEventDetails,
   getEventsByUserId,
   updateEventDetails,
 } from "../../api/eventApi";
+import {
+  createExpense,
+  deleteExpense,
+  getExpensesByEventID,
+} from "../../api/expenseApi";
 
 function index() {
   return (
@@ -96,6 +102,43 @@ function index() {
         }}
       >
         Add User to Event
+      </Button>
+      <hr />
+      <Button
+        onClick={() => {
+          createExpense("Test UID", "96caVXgNFXrPyeUJqogY")
+            .then((res) => console.log("Expense created", res))
+            .catch((e) => console.log(e));
+        }}
+      >
+        Create Expense
+      </Button>
+      <Button
+        onClick={() => {
+          addExpense("96caVXgNFXrPyeUJqogY", "Test Expense")
+            .then((res) => console.log("Expense created", res))
+            .catch((e) => console.log(e));
+        }}
+      >
+        Add Expense to event
+      </Button>
+      <Button
+        onClick={() => {
+          deleteExpense("96caVXgNFXrPyeUJqogY", "r6qPCIehl2g71RcEQvXs")
+            .then((res) => console.log("Expense created", res))
+            .catch((e) => console.log(e));
+        }}
+      >
+        Delete Expense Completely
+      </Button>
+      <Button
+        onClick={() => {
+          getExpensesByEventID("96caVXgNFXrPyeUJqogY")
+            .then((res) => console.log("Expense List====>", res))
+            .catch((e) => console.log(e));
+        }}
+      >
+        Get expense by event id
       </Button>
     </div>
   );

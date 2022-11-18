@@ -97,3 +97,16 @@ export const removeUserToEvent = async (email, eventId) => {
     });
   });
 };
+
+export const addExpense = async (eventId, expenseId) => {
+  const docRef = doc(db, "eventCollection", eventId);
+  await updateDoc(docRef, {
+    expensesList: arrayUnion(expenseId),
+  }).catch((e) => console.log(e));
+};
+export const removeExpense = async (eventId, expenseId) => {
+  const docRef = doc(db, "eventCollection", eventId);
+  await updateDoc(docRef, {
+    expensesList: arrayRemove(expenseId),
+  }).catch((e) => console.log(e));
+};

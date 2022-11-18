@@ -12,7 +12,11 @@ function ViewProject() {
       .catch((e) => console.log(e));
   }, [viewProject]);
 
-  return <div>ViewProject ===== {JSON.stringify(res)}</div>;
+  return (
+    <div>
+      ViewProject ===== <pre> {JSON.stringify(res, "", 2)}</pre>
+    </div>
+  );
 }
 
 export default ViewProject;
