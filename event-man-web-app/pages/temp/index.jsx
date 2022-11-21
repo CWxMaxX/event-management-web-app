@@ -16,12 +16,17 @@ import {
 import {
   createExpense,
   deleteExpense,
+  getExpensesByEventId,
   getExpensesByEventID,
 } from "../../api/expenseApi";
+import Head from "next/head";
 
 function index() {
   return (
     <div>
+      <Head>
+        <title>{"Event Planing App | Temp"}</title>
+      </Head>
       {/*<Button onClick={() => addUser()}>Add New User</Button>*/}
       <Button
         onClick={() => getEventListByUser("h8lHxG3GaJfWDzDvbV2CFloBu0u2")}
@@ -133,7 +138,7 @@ function index() {
       </Button>
       <Button
         onClick={() => {
-          getExpensesByEventID("96caVXgNFXrPyeUJqogY")
+          getExpensesByEventId("96caVXgNFXrPyeUJqogY")
             .then((res) => console.log("Expense List====>", res))
             .catch((e) => console.log(e));
         }}

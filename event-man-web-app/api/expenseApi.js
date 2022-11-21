@@ -1,4 +1,13 @@
-import { addDoc, collection, doc, getDoc, deleteDoc } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  deleteDoc,
+  query,
+  where,
+  getDocs,
+} from "firebase/firestore";
 import { db } from "../firebaseConfig";
 import { addEventToUser } from "./userApi";
 import { addExpense, removeExpense } from "./eventApi";
@@ -45,4 +54,20 @@ export const deleteExpense = async (eventId, expenseId) => {
     .then((res) => console.log(res))
     .catch((e) => console.log(e));
   await deleteDoc(docRef);
+};
+
+//Get expenses by event id
+export const getExpensesByEventId = async (eventId) => {
+  let expenseArray = [];
+  const docRef = collection(db, "expenseCollection");
+  const q = query(docRef, where("eventID", "==", eventId));
+  const querySnapshot = await getDocs(q);
+
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    const dataSet = { data: doc.data(), id: doc.id };
+    expenseArray.push(dataSet);
+  });
+
+  return expenseArray;
 };
