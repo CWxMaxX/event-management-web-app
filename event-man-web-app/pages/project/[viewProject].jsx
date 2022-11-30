@@ -101,7 +101,7 @@ function ViewProject() {
           </SectionColumn>
         </SectionColumn>
         <SectionColumn className={"w-full md:w-1/2  items-center"}>
-          <BackgroundCard title={"Event Details"}>
+          <BackgroundCard title={"Expenses Details"}>
             Expense List ====={" "}
             <pre className={"text-clip w-11/12"}>
               {" "}

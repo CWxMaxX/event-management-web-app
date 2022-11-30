@@ -10,7 +10,7 @@ function BackgroundCard({ title, children, className }) {
         backgroundCard text-white "
       >
         <SectionColumn
-          className={"w-full overflow-y-auto max-h-[550px] custom-scrollbar "}
+          className={"w-full overflow-y-auto xl:max-h-[450px]  2xl:max-h-[650px]  custom-scrollbar "}
         >
           {children}
         </SectionColumn>
