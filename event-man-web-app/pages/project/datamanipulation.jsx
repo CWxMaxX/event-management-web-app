@@ -13,3 +13,5 @@ export const getManipulateEventDetails = (details) => {
 		{ label: "Description", value: details?.description || "---" },
 	];
 };
+
+

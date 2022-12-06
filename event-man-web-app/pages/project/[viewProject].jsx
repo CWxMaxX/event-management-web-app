@@ -11,6 +11,10 @@ import BackgroundCard from "../../components/Cards/backgroundCard";
 import { CancelButton, PrimaryButton } from "../../components/Buttons/buttons";
 import DetailsList from "../../components/List/DetailsList";
 import { dummyDetailsCardData, getManipulateEventDetails } from "./datamanipulation";
+import {HorizontalDivider} from "../../components/Layouts/HorizontalDivider";
+import Image from "next/image";
+import {ICONS} from "../../helpers/iconsPath";
+import {IconWithCaption} from "../../components/IconsLayouts/IconWithCaption";
 
 function ViewProject() {
 	const router = useRouter();
@@ -71,6 +75,19 @@ function ViewProject() {
 						{/* <pre>{JSON.stringify(res, "/", 2)}</pre> */}
 						<DetailsList details={getManipulateEventDetails(res)} />
 					</BackgroundCard>
+
+					<HorizontalDivider className={"my-4 w-11/12 lg:hidden"} />
+
+					<SectionRow className={" justify-around px-6 lg:mt-10 w-full "}>
+						<IconWithCaption title={"Add Expense"} size={40} path={ICONS.ADD_LIST} />
+						<IconWithCaption title={"Edit Expense"} size={40} path={ICONS.EDIT_LIST} />
+						<IconWithCaption title={"Payment"} size={40} path={ICONS.PAY_LIST} />
+						<IconWithCaption title={"Delete Expense"} size={40} path={ICONS.DELETE_LIST} />
+
+
+					</SectionRow>
+					<HorizontalDivider className={"my-4 w-11/12 lg:hidden"} />
+
 					{/* <SectionColumn className={"w-full justify-center items-center mt-24"}>
 						<PrimaryButton title={"Add Expense"} className={"w-[250px]"} onClick={addExpense} />
 						<SectionRow className={"w-full items-center justify-center"}>
